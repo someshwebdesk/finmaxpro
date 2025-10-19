@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact FinMaxPro | Get in Touch</title>
+  <meta name="description" content="Contact FinMaxPro Solutions Pvt. Ltd. for finance tools, collaborations, or support. We’re here to help users from USA and India." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html" class="logo">FinMaxPro</a></h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Contact Us</h2>
+    <p class="intro">We’d love to hear from you! Whether it’s a partnership inquiry, feedback, or technical question, the FinMaxPro team is here to help.</p>
+
+    <section class="contact-section">
+      <h3>📬 Get in Touch</h3>
+      <form id="contactForm" onsubmit="return sendMessage(event)">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="statusMsg"></p>
+    </section>
+
+    <section class="contact-details">
+      <h3>🏢 Our Office</h3>
+      <p><strong>FinMaxPro Solutions Pvt. Ltd.</strong></p>
+      <p>Contact Email: <a href="mailto:someshwebdesk@gmail.com">someshwebdesk@gmail.com</a></p>
+      <p>Target Regions: USA & India</p>
+    </section>
+
+    <div class="ad-slot">
+      <p>Ad Space: Display your AdSense ad here</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 FinMaxPro Solutions Pvt. Ltd. | USA & India</p>
+  </footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const status = document.getElementById('statusMsg');
+
+      if (name && email && message) {
+        // Here you can later integrate EmailJS or Replit DB for real form handling
+        status.innerHTML = "✅ Message sent successfully! We’ll reply within 24 hours.";
+        status.style.color = "green";
+        document.getElementById('contactForm').reset();
+      } else {
+        status.innerHTML = "⚠️ Please fill out all fields.";
+        status.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
