@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinMaxPro – Smart Loan EMI Calculator & Finance Tips</title>
+  <meta name="description" content="Calculate your loan EMI instantly with FinMaxPro. Get smart finance insights for India & USA." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">FinMaxPro</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Welcome to FinMaxPro – Your Smart EMI Partner</h1>
+      <p>Use our free EMI Calculator to plan your finances better for loans in India & USA.</p>
+    </section>
+
+    <section class="calculator-section">
+      <h2>EMI Calculator</h2>
+      <div class="calculator">
+        <div class="input-group">
+          <label>Loan Amount (₹ / $)</label>
+          <input type="number" id="loanAmount" placeholder="Enter loan amount" />
+        </div>
+        <div class="input-group">
+          <label>Interest Rate (%)</label>
+          <input type="number" id="interestRate" placeholder="e.g. 8.5" />
+        </div>
+        <div class="input-group">
+          <label>Loan Tenure (Years)</label>
+          <input type="number" id="loanTenure" placeholder="e.g. 5" />
+        </div>
+        <button id="calculateBtn">Calculate EMI</button>
+      </div>
+
+      <div class="result">
+        <h3>Monthly EMI: <span id="emiResult">—</span></h3>
+        <p>Total Interest: <span id="totalInterest">—</span></p>
+        <p>Total Payment: <span id="totalPayment">—</span></p>
+      </div>
+
+      <canvas id="emiChart"></canvas>
+
+      <!-- Placeholder for AdSense -->
+      <div class="ad-slot">
+        <!-- Your AdSense code will go here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 FinMaxPro Solutions Pvt. Ltd. | USA & India</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
