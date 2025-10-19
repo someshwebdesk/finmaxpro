@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yourdomain.com/sitemap.html
+
+# Disallow unnecessary folders (optional)
+Disallow: /tmp/
+Disallow: /private/
