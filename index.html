@@ -1,227 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FinMaxPro – Smart Loan EMI Calculator & Finance Tips</title>
-
-  <!-- ✅ Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinMaxPro – Loan EMI Calculator & Finance Blog</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="FinMaxPro helps you calculate EMIs, compare loans, and get expert finance tips for smart money management.">
-  <meta name="keywords" content="EMI calculator, loan calculator, finance tips, FinMaxPro, mortgage, car loan, home loan">
+  <meta name="description" content="FinMaxPro is a modern finance website offering a loan EMI calculator, blog, and AdSense-ready layout for Indian and US audiences.">
+  <meta name="keywords" content="loan calculator, EMI calculator, finance blog, AdSense, FinMaxPro, Indian finance, US finance">
+  <meta name="author" content="Somesh WebDesk">
+  <meta name="robots" content="index, follow">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="FinMaxPro – Loan EMI Calculator & Finance Blog">
+  <meta property="og:description" content="Finance tools and guides for Indian and US users. AdSense-ready and SEO optimized.">
+  <meta property="og:url" content="https://finmaxpro.netlify.app">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://finmaxpro.netlify.app/asset/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="asset/favicon.ico" type="image/x-icon" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
-<!-- 🔹 Sticky & Responsive Header -->
-<style>
-  /* Header styling */
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-
-  /* Logo */
-  header img {
-    width: 180px;
-    height: auto;
-  }
-
-  /* Navigation links */
-  nav {
-    display: flex;
-    gap: 20px;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-
-  nav a:hover {
-    color: #007bff;
-  }
-
-  /* Mobile Menu */
-  .menu-toggle {
-    display: none;
-    font-size: 26px;
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    nav {
-      display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      right: 0;
-      width: 100%;
-      text-align: center;
-      border-top: 1px solid #eee;
-    }
-
-    nav.active {
-      display: flex;
-    }
-
-    .menu-toggle {
-      display: block;
-    }
-
-    nav a {
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
-    }
-  }
-</style>
-<header>
-  <div style="display:flex; align-items:center; gap:10px;">
-    <img src="assets/logo.png" alt="FinMaxPro Logo">
-  </div>
-
-  <!-- Mobile Menu Toggle -->
-  <span class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">☰</span>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-    <a href="about.html">About</a>
-  </nav>
-</header>
-
   <header>
-    <nav class="navbar">
-      <div class="logo">FinMaxPro</div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-      </ul>
-    </nav>
+    <h1>Welcome to FinMaxPro</h1>
+    <p>Your trusted loan EMI calculator and finance guide</p>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Welcome to FinMaxPro – Your Smart EMI Partner</h1>
-      <p>Use our free EMI Calculator to plan your finances better for loans in India & USA.</p>
+  <main>
+    <section id="calculator">
+      <h2>Loan EMI Calculator</h2>
+      <!-- Your calculator form and logic goes here -->
+      <p>[Calculator UI Placeholder]</p>
     </section>
 
-    <section class="calculator-section">
-      <h2>EMI Calculator</h2>
-      <div class="calculator">
-        <div class="input-group">
-          <label>Loan Amount (₹ / $)</label>
-          <input type="number" id="loanAmount" placeholder="Enter loan amount" />
-        </div>
-        <div class="input-group">
-          <label>Interest Rate (%)</label>
-          <input type="number" id="interestRate" placeholder="e.g. 8.5" />
-        </div>
-        <div class="input-group">
-          <label>Loan Tenure (Years)</label>
-          <input type="number" id="loanTenure" placeholder="e.g. 5" />
-        </div>
-        <button id="calculateBtn">Calculate EMI</button>
-      </div>
+    <section id="blog">
+      <h2>Finance Blog</h2>
+      <p>Explore articles on loans, savings, and financial planning.</p>
+    </section>
 
-      <div class="result">
-        <h3>Monthly EMI: <span id="emiResult">—</span></h3>
-        <p>Total Interest: <span id="totalInterest">—</span></p>
-        <p>Total Payment: <span id="totalPayment">—</span></p>
-      </div>
-
-      <canvas id="emiChart"></canvas>
-
-      <!-- Placeholder for AdSense -->
-      <div class="ad-slot">
-        <!-- Your AdSense code will go here -->
-      </div>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: someshwebdesk@someshwebdesk.com</p>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 FinMaxPro Solutions Pvt. Ltd. | USA & India</p>
+    <p>&copy; 2025 FinMaxPro. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
-<!-- 🌐 FinMaxPro Footer Start -->
-<footer style="background-color:#ffffff; border-top:1px solid #ddd; padding:40px 0; font-family:'Poppins',sans-serif;">
-  <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-between; padding:0 20px;">
-    
-    <!-- Logo + About -->
-    <div style="flex:1 1 250px; min-width:250px; margin-bottom:20px;">
-      <img src="assets/logo.png" alt="FinMaxPro Logo" width="180">
-      <p style="font-size:14px; color:#555; margin-top:15px;">
-        FinMaxPro is a leading platform offering financial calculators, expert blogs, and smart tools to help users make informed money decisions with confidence.
-      </p>
-    </div>
-
-    <!-- Quick Links -->
-    <div style="flex:1 1 200px; min-width:200px; margin-bottom:20px;">
-      <h3 style="font-size:16px; font-weight:600; color:#111;">Quick Links</h3>
-      <ul style="list-style:none; padding:0; margin-top:15px;">
-        <li><a href="index.html" style="text-decoration:none; color:#444;">Home</a></li>
-        <li><a href="about.html" style="text-decoration:none; color:#444;">About</a></li>
-        <li><a href="blog.html" style="text-decoration:none; color:#444;">Blog</a></li>
-        <li><a href="contact.html" style="text-decoration:none; color:#444;">Contact</a></li>
-        <li><a href="privacy.html" style="text-decoration:none; color:#444;">Privacy Policy</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div style="flex:1 1 250px; min-width:250px; margin-bottom:20px;">
-      <h3 style="font-size:16px; font-weight:600; color:#111;">Contact Us</h3>
-      <p style="font-size:14px; color:#555; margin-top:15px;">📧 Email: support@finmaxpro.com</p>
-      <p style="font-size:14px; color:#555;">🌍 Offices: USA & India</p>
-      <p style="font-size:14px; color:#555;">📞 +91-99999-99999</p>
-    </div>
-  </div>
-
-  <div style="text-align:center; border-top:1px solid #eee; padding-top:20px; color:#666; font-size:13px;">
-    © 2025 FinMaxPro Solutions Pvt. Ltd. | USA & India. All Rights Reserved.<br>
-    FinMaxPro is a brand of FinMaxPro Solutions Pvt. Ltd.
-  </div>
-</footer>
-<!-- 🌐 FinMaxPro Footer End -->
-
-<!-- 📘 Structured Data for SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "FinMaxPro",
-  "url": "https://finmaxpro.netlify.app",
-  "logo": "https://finmaxpro.netlify.app/assets/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "support@finmaxpro.com",
-    "contactType": "Customer Support",
-    "areaServed": ["US","IN"],
-    "availableLanguage": ["English","Hindi"]
-  },
-  "sameAs": [
-    "https://www.facebook.com/finmaxpro",
-    "https://www.twitter.com/finmaxpro",
-    "https://www.linkedin.com/company/finmaxpro"
-  ]
-}
-</script>
